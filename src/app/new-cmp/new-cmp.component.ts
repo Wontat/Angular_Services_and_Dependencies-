@@ -1,4 +1,4 @@
-import { Component, OnInit, VERSION } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { MyserviceService } from './../myservice.service';
 
 @Component({
@@ -8,13 +8,11 @@ import { MyserviceService } from './../myservice.service';
 })
 export class NewCmpComponent implements OnInit {
   todaydate;
-  newcomponentproperty;
-  newcomponent = 'Entered in newcomponent';
+  newComponent = 'Entered in newcomponent';
 
   constructor(private myservice: MyserviceService) {}
 
   ngOnInit(): void {
     this.todaydate = this.myservice.showTodayDate();
-    this.newcomponentproperty = this.myservice.serviceproperty;
   }
 }
