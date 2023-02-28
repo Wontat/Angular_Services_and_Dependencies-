@@ -2,17 +2,16 @@ import { Component, OnInit, VERSION } from '@angular/core';
 import { MyserviceService } from './myservice.service';
 
 @Component({
-  selector: 'my-app',
+  selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
 })
-export class NewCmpComponent implements OnInit {
+export class AppComponent {
+  title = 'middemo';
   todaydate;
-  newcomponent = 'Entered in newcomponent';
-
+  componentproperty;
   constructor(private myservice: MyserviceService) {}
-
-  ngOnInit(): void {
+  ngOnInit() {
     this.todaydate = this.myservice.showTodayDate();
   }
 }
